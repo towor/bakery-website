@@ -3,11 +3,20 @@
 * {
   padding: 0;
   margin: 0;
+  color: #5f3700;
+  text-decoration: none;
+  list-style: none;
 }
 
 .page {
+  font-family: "Zen Maru Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo,
+    sans-serif;
   background-color: #fff6df;
 }
+
+/* ==============================================================
+                         ヘッダー
+============================================================== */
 
 .header {
   display: flex;
@@ -23,6 +32,12 @@
 .header__menu {
   height: 30px;
 }
+
+/* ============================================================
+                            メイン
+============================================================ */
+
+/* -------------------- ヒーローセクション -------------------- */
 
 .heroSection {
   position: relative;
@@ -43,4 +58,69 @@
 .heroSecion__slogan {
   position: absolute;
   width: clamp(300px, 50vw, 600px);
+}
+
+/* -------------------- メインコンテンツ共通 -------------------- */
+
+.main__contents {
+  margin: 0 auto;
+}
+
+.mainContents {
+  width: 90vw;
+  max-width: 1024px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, -0.114rem + 6.82vw, 5rem);
+  align-items: center;
+  padding: clamp(1.25rem, -0.114rem + 6.82vw, 5rem) 0;
+}
+
+.content__title {
+  font-size: var(--font-size-2xl);
+}
+
+.content__title--accent {
+  color: #f77567;
+}
+
+.content__detailLink {
+  position: relative;
+  font-size: var(--font-size-m);
+}
+
+.content__detailLink::before {
+  position: absolute;
+  top: 50%;
+  right: -1em;
+  z-index: -1;
+  width: 2em;
+  height: 2em;
+  content: "";
+  background-color: #f3c680;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.content__detailLink--hover:hover {
+  color: #f3c680;
+}
+
+.content__detailLink--hover:hover::before {
+  right: -1.4em;
+  background-color: rgb(95 55 0 / 60%);
+}
+
+/* ---------- コンセプト ---------- */
+
+.concept__description {
+  text-align: center;
+}
+
+.concept__img {
+  width: clamp(300px, 90vw, 900px);
+  border-radius: 20px;
 }

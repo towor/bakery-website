@@ -4,18 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="type-scale.css" />
     <title>Document</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet" />
   </head>
   <body class="page">
+    <!--▼==================== ヘッダー開始 ====================▼-->
     <header class="header">
       <img class="header__logo" src="images/common/logo.png" alt="ロゴ" />
       <img class="header__menu" src="images/common/menu-icon.svg" alt="メニューアコン" />
     </header>
-    <main>
+    <!--▲==================== ヘッダー終了 ====================▲-->
+
+    <!--▼==================== メイン開始 ====================▼-->
+    <main class="main">
       <section class="heroSection">
         <img class="heroSecion__img" src="images/home/main-visual.jpg" alt="メインビジュアル" />
         <img class="heroSecion__slogan" src="images/home/slogan.png" alt="スローガン" />
       </section>
+
+      <section class="mainContents main__contents">
+        <!--▼ こだわり開始 ▼-->
+        <section class="concept content">
+          <h2 class="content__title">こ<span class="content__title--accent">だ</span>わり</h2>
+          <p class="concept__description text-m">
+            北海道産「ゆめちから」を使った香り高い小麦の風味。<br />地元農家から届く採れたて野菜を贅沢に使用し、体にやさしい無添加のパンをひとつひとつ丁寧に焼き上げています。
+          </p>
+          <img class="concept__img" src="./images/home/concept.jpg" alt="コンセプト" />
+          <a class="content__detailLink content__detailLink--hover" href="#">こだわりについてもっと詳しく</a>
+        </section>
+        <!--▲ こだわり終了 ▲-->
+      </section>
     </main>
+    <!--▲==================== メイン終了 ====================▲-->
   </body>
 </html>
