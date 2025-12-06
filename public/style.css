@@ -60,6 +60,47 @@
   width: clamp(300px, 50vw, 600px);
 }
 
+/* -------------------- お知らせ -------------------- */
+
+.heroSection__news {
+  position: absolute;
+  right: 20px;
+  bottom: -40px;
+}
+
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  width: min(70vw, 400px);
+  padding: 24px clamp(0.5rem, -0.136rem + 3.18vw, 2.25rem);
+  background-color: rgb(243 198 128 /80%);
+  border-radius: 12px;
+}
+
+.news__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.news__title {
+  font-size: var(--font-size-r);
+  line-height: var(--line-height-r);
+}
+
+.news__title--hover:hover {
+  color: #f77567;
+  filter: brightness(90%);
+}
+
+.news__more--hover:hover {
+  color: #f77567;
+  text-decoration: underline;
+  filter: brightness(90%);
+}
+
 /* -------------------- メインコンテンツ共通 -------------------- */
 
 .main__contents {
@@ -76,7 +117,7 @@
   flex-direction: column;
   gap: clamp(2.5rem, 1.591rem + 4.55vw, 5rem);
   align-items: center;
-  padding: clamp(2.5rem, 1.136rem + 6.82vw, 6.25rem) 0;
+  padding: 80px 0;
 }
 
 .content__title {
@@ -262,6 +303,13 @@
 }
 
 @media (width <= 767px) {
+  .heroSection__news {
+    right: auto;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .footerMain__shopInfo {
     flex: 0 1 auto;
   }
