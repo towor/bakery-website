@@ -13,3 +13,22 @@
     sans-serif;
   background-color: #fff6df;
 }
+
+/* ==============================================================
+                         ヘッダー
+============================================================== */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px 8px 4px;
+}
+
+.header__logo {
+  width: clamp(200px, 70vw, 400px);
+}
+
+.header__menu {
+  height: 30px;
+}
