@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+  text-decoration: none;
+  list-style: none;
+}
+
+.page {
+  font-family: "Zen Maru Gothic", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo,
+    sans-serif;
+  background-color: var(--background-color);
+}
+
+/* ==============================================================
+                         ヘッダー
+============================================================== */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px 8px 4px;
+}
+
+.header__logo {
+  width: clamp(200px, 70vw, 400px);
+}
+
+.header__menu {
+  height: 30px;
+}
+
+/* ============================================================
+                            メイン
+============================================================ */
+
+/* -------------------- アイキャッチ -------------------- */
+
+.eyecatch {
+  position: relative;
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyecatch__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.eyecatch__title {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  font-family: "Kiwi Maru", serif;
+  color: #fff;
+}
+
+/* -------------------- メニュー -------------------- */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(3.75rem, 2.386rem + 6.82vw, 7.5rem);
+  width: 90vw;
+  max-width: 1024px;
+  padding-top: clamp(2.5rem, 1.591rem + 4.55vw, 5rem);
+  padding-bottom: clamp(2.5rem, 1.591rem + 4.55vw, 5rem);
+  margin: 0 auto;
+}
+
+.menu__category {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(2.5rem, 1.864rem + 3.18vw, 4.25rem);
+  align-items: center;
+}
+
+.menu__title {
+  font-size: var(--font-size-2xl);
+}
+
+.menu__title--accent {
+  color: var(--accent-color);
+}
+
+.menu__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  gap: clamp(2.5rem, 2.045rem + 2.27vw, 3.75rem);
+  width: 100%;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  align-items: center;
+}
+
+.menuItem__img {
+  width: 100%;
+  max-width: 60vw;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.menuItem__title {
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
+  text-align: center;
+}
+
+.menu__separator {
+  border: none;
+  border-top: 4px dotted var(--primary-color);
+}
+
+/* ============================================================
+                            フッター
+============================================================ */
+
+.footerMain {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 40px 20px;
+  background-color: var(--primary-color);
+}
+
+.footerMain__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* ---------- フッター/店舗情報 ---------- */
+
+.footerMain__shopInfo {
+  display: flex;
+  flex: 2 1 300px;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.footerMain__logo {
+  width: clamp(200px, 40vw, 400px);
+}
+
+/* ---------- フッター/ナビゲーション ---------- */
+
+.footerMain__nav {
+  flex: 1 1 200px;
+}
+
+.footerMain__navList {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  gap: clamp(0.25rem, -0.114rem + 1.82vw, 1.25rem) 40px;
+  place-items: center;
+}
+
+.footerMain__navLink {
+  font-size: var(--font-size-r);
+  line-height: var(--line-height-r);
+}
+
+.footerMain__navLink--hover:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.footerMain__current {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+  font-size: var(--font-size-r);
+  line-height: var(--line-height-r);
+}
+
+.footerMain__current::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  content: "";
+  background: var(--accent-color);
+  border-radius: 3px;
+}
+
+/* ---------- フッター/コピーライト ---------- */
+
+.footer__copyright {
+  margin: 0 auto;
+}
+
+.copyright {
+  max-width: 1024px;
+  padding: 10px 0;
+}
+
+.copyright__text {
+  text-align: center;
+}
+
+/* ============================================================
+                            メデイアクエリ
+============================================================ */
+
+@media (width >= 768px) {
+  .footerMain__shopInfo {
+    flex: 2 1 300px;
+  }
+
+  .footerMain__nav {
+    flex: 1 1 200px;
+  }
+}
+
+@media (width <= 767px) {
+  .eyecatch__title {
+    top: 50%;
+    right: auto;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  .footerMain__shopInfo {
+    flex: 0 1 auto;
+  }
+
+  .footerMain__nav {
+    flex: 0 1 auto;
+  }
+}
