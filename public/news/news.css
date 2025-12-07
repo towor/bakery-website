@@ -122,6 +122,27 @@
   -webkit-box-orient: vertical;
 }
 
+.pagenation {
+  display: flex;
+  column-gap: clamp(1.25rem, 0.795rem + 2.27vw, 2.5rem);
+  justify-content: center;
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-l);
+}
+
+.pagenation__currentNum {
+  width: 1.8em;
+  height: 1.8em;
+  color: #fff;
+  text-align: center;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+}
+
+.pagenation__link--hover:hover {
+  color: #f3c680;
+}
+
 /* ============================================================
                             フッター
 ============================================================ */
