@@ -32,3 +32,44 @@
 .header__menu {
   height: 30px;
 }
+
+/* ============================================================
+                            メイン
+============================================================ */
+
+/* -------------------- アイキャッチ -------------------- */
+
+.eyecatch {
+  position: relative;
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyecatch__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.eyecatch__title {
+  position: absolute;
+  top: 20px;
+  right: 80px;
+  font-family: "Kiwi Maru", serif;
+  color: #fff;
+}
+
+/* ============================================================
+                            メデイアクエリ
+============================================================ */
+
+@media (width <= 767px) {
+  .eyecatch__title {
+    top: 50%;
+    right: auto;
+    left: 50%;
+    translate: -50% -50%;
+  }
+}
