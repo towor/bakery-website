@@ -3,9 +3,154 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="common/css/common.css" />
+    <link rel="stylesheet" href="common/css/type-scale.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet" />
   </head>
-  <body>
-    <h1>Bakery</h1>
+  <body class="page">
+    <!--▼==================== ヘッダー開始 ====================▼-->
+    <header class="header">
+      <img class="header__logo" src="common/images/logo.png" alt="ロゴ" />
+      <img class="header__menu" src="common/images/menu-icon.svg" alt="メニューアコン" />
+    </header>
+    <!--▲==================== ヘッダー終了 ====================▲-->
+
+    <!--▼==================== メイン開始 ====================▼-->
+    <main class="main">
+      <section class="heroSection">
+        <img class="heroSecion__img" src="images/main-visual.jpg" alt="メインビジュアル" />
+        <img class="heroSecion__slogan" src="images/slogan.png" alt="スローガン" />
+        <section class="news heroSection__news">
+          <p class="news__heading text-l">お知らせ</p>
+          <ul class="news__list">
+            <li class="news__listItem">
+              <a class="news__title news__title--hover" href="">2025/07/25 - 臨時休業</a>
+            </li>
+            <li class="news__listItem">
+              <a class="news__title news__title--hover" href="">2025/07/12 - PayPayに対応しました</a>
+            </li>
+            <li class="news__listItem">
+              <a class="news__title news__title--hover" href="">2025/06/07 - 〇〇に掲載されました</a>
+            </li>
+          </ul>
+          <a class="news__more news__more--hover text-r" href="">すべてのお知らせを見る</a>
+        </section>
+      </section>
+
+      <section class="mainContents main__contents">
+        <!--▼ 季節限定メニュー開始 ▼-->
+        <section class="seasonalMenu content">
+          <h2 class="content__title">季<span class="content__title--accent">節</span>限定メニュー</h2>
+          <div class="seasonalMenu__collection">
+            <div class="seasonalMenuItem">
+              <h3 class="text-l">夏色フォカッチャ</h3>
+              <p class="text-r">
+                彩り豊かな夏野菜をたっぷりのせた、<br />
+                見た目も味も楽しいフォカッチャです
+              </p>
+              <img class="seasonalMenuItem__img" src="images/summer-focaccia.jpg" alt="夏色フォカッチャ" />
+            </div>
+            <div class="seasonalMenuItem">
+              <h3 class="text-l">瀬戸内パウンド</h3>
+              <p class="text-r">
+                瀬戸内レモンの爽やかな香りと<br />ほどよい酸味が広がる、<br />夏にぴったりのパウンドケーキです
+              </p>
+              <img class="seasonalMenuItem__img" src="images/setouchi-pound-cake.jpg" alt="瀬戸内パウンド" />
+            </div>
+          </div>
+          <a class="content__detailLink content__detailLink--hover" href="#">他のメニューを見る</a>
+        </section>
+        <!--▲ 季節限定メニュー終了 ▲-->
+
+        <hr class="mainContents__separator" />
+
+        <!--▼ こだわり開始 ▼-->
+        <section class="concept content">
+          <h2 class="content__title">こ<span class="content__title--accent">だ</span>わり</h2>
+          <p class="concept__description text-m">
+            北海道産「ゆめちから」を使った香り高い小麦の風味。<br />地元農家から届く採れたて野菜を贅沢に使用し、体にやさしい無添加のパンをひとつひとつ丁寧に焼き上げています。
+          </p>
+          <img class="concept__img" src="./images/concept.jpg" alt="コンセプト" />
+          <a class="content__detailLink content__detailLink--hover" href="#">こだわりについてもっと詳しく</a>
+        </section>
+        <!--▲ こだわり終了 ▲-->
+
+        <hr class="mainContents__separator" />
+
+        <!--▼ 店舗情報開始 ▼-->
+        <section class="shopInfo content">
+          <h2 class="content__title">店<span class="content__title--accent">舗</span>情報</h2>
+          <div class="shopInfo__detail">
+            <div class="shopInfo__basic">
+              <p class="shopInfo__basicItem">
+                <span>営業時間</span>
+                <span>：</span>
+                <span>07:00 ~18:00</span>
+              </p>
+              <p class="shopInfo__basicItem">
+                <span>定休日</span>
+                <span>：</span>
+                <span>月・火</span>
+              </p>
+              <p class="shopInfo__basicItem">
+                <span>アクセス</span>
+                <span>：</span>
+                <span>〇〇駅から徒歩３分</span>
+              </p>
+              <p class="shopInfo__basicItem">
+                <span>お支払い</span>
+                <span>：</span>
+                <span>現金、QR決済、<br />クレジットカード</span>
+              </p>
+            </div>
+            <div class="shopInfo__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8384346471057!2d139.76255111396313!3d35.6809800216853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbee1467bb%3A0x410f8b6e7e3ee34f!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1760336699266!5m2!1sja!2sjp"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+          <a class="content__detailLink content__detailLink--hover" href="#">その他の店舗情報はこちら</a>
+        </section>
+        <!--▲ 店舗情報終了 ▲-->
+      </section>
+    </main>
+
+    <!--▲==================== メイン終了 ====================▲-->
+
+    <!--▼==================== フッター開始 ====================▼-->
+    <footer class="footer">
+      <section class="footerMain">
+        <div class="footerMain__inner">
+          <div class="footerMain__shopInfo">
+            <img class="footerMain__logo" src="common/images/logo-outline.png" alt="ロゴ" />
+            <p class="text-r">静岡県浜松市浜名区八幡xxx-xx</p>
+            <p class="text-r">TEL 03-4512-xxxx</p>
+          </div>
+          <nav class="footerMain__nav">
+            <ul class="footerMain__navList">
+              <li><p class="footerMain__current">ホーム</p></li>
+              <li><a class="footerMain__navLink footerMain__navLink--hover" href="#">こだわり</a></li>
+              <li><a class="footerMain__navLink footerMain__navLink--hover" href="menu/menu.html">メニュー</a></li>
+              <li><a class="footerMain__navLink footerMain__navLink--hover" href="news/news.html">お知らせ</a></li>
+              <li><a class="footerMain__navLink footerMain__navLink--hover" href="#">店舗情報</a></li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+      <section class="copyright footer__copyright">
+        <p class="copyright__text text-r">&copy; 2025 Mocchii bakery</p>
+      </section>
+    </footer>
+    <!--▲==================== フッター終了 ====================▲-->
   </body>
 </html>
