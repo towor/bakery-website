@@ -60,9 +60,9 @@
   color: #fff;
 }
 
-/* -------------------- メニュー -------------------- */
+/* -------------------- コンセプト -------------------- */
 
-.menu {
+.conceptWrapper {
   display: flex;
   flex-direction: column;
   row-gap: clamp(3.75rem, 2.386rem + 6.82vw, 7.5rem);
@@ -73,53 +73,36 @@
   margin: 0 auto;
 }
 
-.menu__category {
-  display: flex;
-  flex-direction: column;
-  row-gap: clamp(2.5rem, 1.864rem + 3.18vw, 4.25rem);
-  align-items: center;
-}
-
-.menu__title {
-  font-size: var(--font-size-2xl);
-}
-
-.menu__title--accent {
-  color: var(--accent-color);
-}
-
-.menu__list {
+.concept {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: clamp(2.5rem, 2.045rem + 2.27vw, 3.75rem);
-  width: 100%;
-}
-
-.menuItem {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
   align-items: center;
-}
-
-.menuItem__img {
   width: 100%;
-  max-width: 60vw;
-  height: auto;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  border-radius: 8px;
 }
 
-.menuItem__title {
-  font-size: var(--font-size-l);
-  line-height: var(--line-height-l);
+.concept__title {
+  margin-bottom: 20px;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
   text-align: center;
 }
 
-.menu__separator {
-  border: none;
-  border-top: 4px dotted var(--primary-color);
+.concept__title--accent {
+  color: var(--accent-color);
+}
+
+.concept__description {
+  font-size: var(--font-size-r);
+  line-height: var(--line-height-r);
+}
+
+.concept__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* ============================================================
@@ -219,6 +202,14 @@
 ============================================================ */
 
 @media (width >= 768px) {
+  .concept--reverse .concept__text {
+    order: 2;
+  }
+
+  .concept--reverse .concept__img {
+    order: 1;
+  }
+
   .footerMain__shopInfo {
     flex: 2 1 300px;
   }
