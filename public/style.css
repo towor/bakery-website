@@ -29,8 +29,17 @@
   width: clamp(200px, 70vw, 400px);
 }
 
-.header__menu {
+.header__navBtn {
+  width: 30px;
   height: 30px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+
+.header__navBtnImg {
+  width: 100%;
+  height: auto;
 }
 
 /* ============================================================
@@ -346,6 +355,31 @@
 }
 
 @media (width <= 767px) {
+  .header__nav {
+    position: fixed;
+    inset: 0 -100% 0 100%;
+    z-index: 100;
+    background-color: rgb(243 198 128 /80%);
+    transition: transform 0.3s;
+  }
+
+  .open .header__nav {
+    transform: translate(-100%, 0);
+  }
+
+  .open .page {
+    overflow: hidden;
+  }
+
+  .header__navList {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
   .heroSection__news {
     right: auto;
     bottom: -40px;

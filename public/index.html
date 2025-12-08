@@ -17,7 +17,18 @@
     <!--▼==================== ヘッダー開始 ====================▼-->
     <header class="header">
       <img class="header__logo" src="common/images/logo.png" alt="ロゴ" />
-      <img class="header__menu" src="common/images/menu-icon.svg" alt="メニューアコン" />
+      <button class="header__navBtn" onclick="document.querySelector('html').classList.toggle('open')">
+        <img class="header__navBtnImg" src="common/images/menu-icon.svg" alt="メニューアコン" />
+      </button>
+      <nav class="header__nav">
+        <ul class="header__navList">
+          <li><p>ホーム</p></li>
+          <li><a href="concept/concept.html">こだわり</a></li>
+          <li><a href="menu/menu.html">メニュー</a></li>
+          <li><a href="news/news.html">お知らせ</a></li>
+          <li><a href="info/info.html">店舗情報</a></li>
+        </ul>
+      </nav>
     </header>
     <!--▲==================== ヘッダー終了 ====================▲-->
 
