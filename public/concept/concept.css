@@ -61,6 +61,51 @@
   color: #fff;
 }
 
+/* -------------------- コンセプト -------------------- */
+
+.conceptWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: clamp(3.75rem, 2.386rem + 6.82vw, 7.5rem);
+  width: 90vw;
+  max-width: 1024px;
+  padding-top: clamp(2.5rem, 1.591rem + 4.55vw, 5rem);
+  padding-bottom: clamp(2.5rem, 1.591rem + 4.55vw, 5rem);
+  margin: 0 auto;
+}
+
+.concept {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(2.5rem, 2.045rem + 2.27vw, 3.75rem);
+  align-items: center;
+  width: 100%;
+}
+
+.concept__title {
+  margin-bottom: 20px;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+  text-align: center;
+}
+
+.concept__title--accent {
+  color: var(--accent-color);
+}
+
+.concept__description {
+  font-size: var(--font-size-r);
+  line-height: var(--line-height-r);
+}
+
+.concept__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 /* ============================================================
                             フッター
 ============================================================ */
@@ -158,6 +203,14 @@
 ============================================================ */
 
 @media (width >= 768px) {
+  .concept--reverse .concept__text {
+    order: 2;
+  }
+
+  .concept--reverse .concept__img {
+    order: 1;
+  }
+
   .footerMain__shopInfo {
     flex: 2 1 300px;
   }
