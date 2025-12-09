@@ -33,6 +33,39 @@
   height: 30px;
 }
 
+.header__navBtn {
+  width: 30px;
+  height: 30px;
+  outline: none;
+  background-color: transparent;
+  border: none;
+}
+
+.open .header__navBtn {
+  z-index: 110;
+}
+
+.header__navBtnImg {
+  width: 100%;
+  height: auto;
+}
+
+.header__navBtnImg--open {
+  display: revert;
+}
+
+.open .header__navBtnImg--open {
+  display: none;
+}
+
+.header__navBtnImg--close {
+  display: none;
+}
+
+.open .header__navBtnImg--close {
+  display: revert;
+}
+
 /* ============================================================
                             メイン
 ============================================================ */
@@ -219,6 +252,48 @@
 ============================================================ */
 
 @media (width >= 768px) {
+  /* ============================================================
+                            ヘッダー (タブレット以上)
+============================================================ */
+
+  .header__navBtn {
+    display: none;
+  }
+
+  .header__navList {
+    display: flex;
+    gap: 24px;
+    margin-right: 12px;
+  }
+
+  .header__navCurrent {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+    font-size: var(--font-size-r);
+    line-height: var(--line-height-r);
+  }
+
+  .header__navCurrent::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    content: "";
+    background: var(--accent-color);
+    border-radius: 3px;
+  }
+
+  .header__navLink {
+    font-size: var(--font-size-r);
+    line-height: var(--line-height-r);
+  }
+
+  /* ============================================================
+                              フッター (タブレット以上)
+  ============================================================ */
+
   .footerMain__shopInfo {
     flex: 2 1 300px;
   }
@@ -229,12 +304,74 @@
 }
 
 @media (width <= 767px) {
+  /* ============================================================
+                            ヘッダー (モバイル)
+============================================================ */
+
+  .header__nav {
+    position: fixed;
+    inset: 0 -100% 0 100%;
+    z-index: 100;
+    background-color: rgb(243 198 128 /90%);
+    transition: transform 0.3s;
+  }
+
+  .open .header__nav {
+    transform: translate(-100%, 0);
+  }
+
+  .open .page {
+    overflow: hidden;
+  }
+
+  .header__navList {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .header__navCurrent {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+    font-size: var(--font-size-2xl);
+    line-height: var(--line-height-2xl);
+  }
+
+  .header__navCurrent::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    content: "";
+    background: var(--accent-color);
+    border-radius: 3px;
+  }
+
+  .header__navLink {
+    font-size: var(--font-size-2xl);
+    font-weight: bold;
+    line-height: var(--line-height-2xl);
+  }
+
+  /* ============================================================
+                              メイン (モバイル)
+  ============================================================ */
+
   .eyecatch__title {
     top: 50%;
     right: auto;
     left: 50%;
     translate: -50% -50%;
   }
+
+  /* ============================================================
+                              フッター(モバイル)
+  ============================================================ */
 
   .footerMain__shopInfo {
     flex: 0 1 auto;
