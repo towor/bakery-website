@@ -37,9 +37,29 @@
   border: none;
 }
 
+.open .header__navBtn {
+  z-index: 110;
+}
+
 .header__navBtnImg {
   width: 100%;
   height: auto;
+}
+
+.header__navBtnImg--open {
+  display: revert;
+}
+
+.open .header__navBtnImg--open {
+  display: none;
+}
+
+.header__navBtnImg--close {
+  display: none;
+}
+
+.open .header__navBtnImg--close {
+  display: revert;
 }
 
 /* ============================================================
