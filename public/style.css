@@ -115,8 +115,13 @@
 }
 
 .news__title {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
   font-size: var(--font-size-r);
   line-height: var(--line-height-r);
+  -webkit-box-orient: vertical;
 }
 
 .news__title--hover:hover {
